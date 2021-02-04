@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <tr> 
+                    <th>Nom Emetteur</th>
+                    <th>Prenom Emetteur</th>
+                    <th>Num Emetteur</th>
+                    <th>Cni Emetteur</th>
+                    <th>Montant</th>
+                    <th>Date Envoie</th>
+                    <th>Nom Recepteur</th>
+                    <th>Prenom Recepteur</th>
+                    
+                    <th>Num Recepteur</th>
+                </tr>
+                <tbody *ngFor="let envoie of envoies">
+                    <tr>
+                        <td>{{envoie.emetteur.nom}}</td>
+                        <td>{{envoie.emetteur.prenom}}</td>
+                        <td>{{envoie.emetteur.telephone}}</td>
+                        <td>{{envoie.emetteur.cni}}</td>
+
+                        <td>{{envoie.montant}}</td>
+                        <td>{{envoie.date | date:'dd/MM/yyyy'}}</td>
+                        <td>{{envoie.recepteur.nom}}</td>
+                        <td>{{envoie.recepteur.prenom}}</td>
+                        <td>{{envoie.recepteur.telephone}}</td>
+                        <td><a class="btn btn-danger" (click)="supprimerEnvoie(envoie)">supprimer</a></td>
+                        <td><a class="btn btn-success" [routerLink]="['/updateEnvoie',envoie.montant]">Modifier</a></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

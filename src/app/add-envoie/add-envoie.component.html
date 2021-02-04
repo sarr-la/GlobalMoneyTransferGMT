@@ -1,0 +1,77 @@
+<div class="container">
+    <div>
+        <H2> Ajouter Emetteur</H2>
+    </div>
+    <form #f="ngForm"  (ngSubmit)="addEnvoie()">
+        <div class=" col-md-6 col-lg-6">
+            <label> Nom Emetteur</label>
+            <input type = "text" [(ngModel)]="newEnvoie.emetteur.nom"
+            name="nom" class="form-control">
+        </div>
+
+        <div class=" col-md-6 col-lg-6">
+            <label> Prenom Emetteur</label>
+            <input type = "text" [(ngModel)]="newEnvoie.emetteur.prenom"
+            name="prenom" class="form-control">
+        </div>
+
+        <div class=" col-md-6 col-lg-6">
+            <label> Num Emetteur</label>
+            <input type = "text" [(ngModel)]="newEnvoie.emetteur.telephone"
+            name="telephone" class="form-control">
+        </div>
+
+        <div class=" col-md-6 col-lg-6">
+            <label> Cni Emetteur</label>
+            <input type = "text" [(ngModel)]="newEnvoie.emetteur.cni"
+            name="cni" class="form-control">
+        </div>
+
+        <div class=" col-md-6 col-lg-6">
+            <label> Montant</label>
+            <input type = "number" [(ngModel)]="newEnvoie.montant"
+            name="montant" class="form-control">
+        </div>
+
+        <div class=" col-md-6 col-lg-6">
+            <label> Date Envoie</label>
+            <input type = "date" [(ngModel)]="newEnvoie.date"
+            name="date" class="form-control">
+        </div>
+
+        <div>
+            <H2 > Ajouter Recepteur</H2>
+
+        </div>
+        <div class=" col-md-6 col-lg-6">
+            <label> Nom Recepteur</label>
+            <input type = "text" [(ngModel)]="newEnvoie.recepteur.nom"
+            name="nom" class="form-control">
+        </div>
+
+        <div class=" col-md-6 col-lg-6">
+            <label> Prenom Recepteur</label>
+            <input type = "text" [(ngModel)]="newEnvoie.recepteur.prenom"
+            name="prenom" class="form-control">
+        </div>
+
+       
+
+        <div class=" col-md-6 col-lg-6">
+            <label> Num Recepteur</label>
+            <input type = "number" [(ngModel)]="newEnvoie.recepteur.telephone"
+            name="telephone" class="form-control">
+        </div>
+
+        <div class="mt-2">
+            <button type="submit" (click)="addEnvoie()" class="btn btn-success"> Envoyer</button>
+            <div>
+               <h1>{{ message }}</h1>
+        </div>
+
+         </div>
+        </form>
+        </div>
+
+
+
